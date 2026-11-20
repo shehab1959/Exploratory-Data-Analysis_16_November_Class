@@ -58,6 +58,10 @@ print(train_df.isnull().sum())
 
 
 
+print(train_df.describe())
+
+
+
 
 
 ##Visualization
