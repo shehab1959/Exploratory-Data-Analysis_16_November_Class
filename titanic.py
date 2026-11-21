@@ -64,6 +64,10 @@ print(train_df.describe())
 
 
 
+
+print(train_df["Sex"].value_counts())
+
+
 ##Visualization
 import seaborn as sns
 import matplotlib.pyplot as plt
@@ -72,4 +76,20 @@ import matplotlib.pyplot as plt
 sns.countplot(x='Survived', hue='Survived', data=train_df, palette=["blue", "green"])
 plt.xticks([0, 1], ["Not Survived", "Survived"])
 plt.title("Survival Distribution")
+plt.show()
+
+
+
+
+
+
+
+
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+sns.countplot(x="Sex", data=train_df, palette=["orange", "purple"])
+plt.title("Distribution of Gender")
+plt.xlabel("Gender")
+plt.ylabel("Count")
 plt.show()
