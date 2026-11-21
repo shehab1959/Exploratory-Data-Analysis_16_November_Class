@@ -41,12 +41,12 @@ train_df.tail()
 
 
 
-
+##
 print(train_df.columns.values)
 
 
 
-
+##
 train_df.info()
 
 
@@ -57,14 +57,14 @@ print(train_df.isnull().sum())
 
 
 
-
+##
 print(train_df.describe())
 
 
 
 
 
-
+##
 print(train_df["Sex"].value_counts())
 
 
@@ -84,12 +84,36 @@ plt.show()
 
 
 
-
+##
 import seaborn as sns
 import matplotlib.pyplot as plt
 
 sns.countplot(x="Sex", data=train_df, palette=["orange", "purple"])
 plt.title("Distribution of Gender")
 plt.xlabel("Gender")
+plt.ylabel("Count")
+plt.show()
+
+
+
+
+
+##
+print(train_df["Pclass"].value_counts())
+
+
+
+
+
+
+
+
+##
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+sns.countplot(x="Pclass", data=train_df, palette=["teal", "crimson", "navy"])
+plt.title("Distribution of Passenger Class")
+plt.xlabel("Passenger Class")
 plt.ylabel("Count")
 plt.show()
